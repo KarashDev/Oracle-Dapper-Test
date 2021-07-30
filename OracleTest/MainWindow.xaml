@@ -10,5 +10,6 @@
         <Button x:Name="btnDbResult" Content="Show" HorizontalAlignment="Left" Margin="266,142,0,0" VerticalAlignment="Top" Height="28" Width="73" Click="btnDbResult_Click"/>
         <Label x:Name="lblDbResult" Content="*info*" HorizontalAlignment="Left" Margin="110,138,0,0" VerticalAlignment="Top" Height="36" Width="118" FontSize="17"/>
         <DataGrid x:Name="gridDb" Margin="78,209,118,59"/>
+        <TextBox x:Name="txtboxInputID" HorizontalAlignment="Left" Margin="242,91,0,0" Text="*input ID*" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>

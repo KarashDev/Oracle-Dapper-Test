@@ -40,7 +40,7 @@ namespace OracleTest
             
             //string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
             var connectionString = "Data Source=TESTCN;User Id=karash_is;Password=qwe123;";
-            
+
             // Прямое подключение (ADO.NET)
             //using (OracleConnection connection = new OracleConnection(connectionString))
             //{
@@ -59,14 +59,18 @@ namespace OracleTest
             //    connection.Close();
             //}
 
+
+
             // Через Dapper
+            var inputID = Convert.ToInt32(txtboxInputID.Text);
+
             using (OracleConnection connection = new OracleConnection(connectionString))
             {
                 connection.Open();
 
-                var entities = connection.Query<Entity>("select ID, TYPE, APIRESOURCEID from CN.IS4$APIRESOURCECLAIM").ToList();
+                var entities = connection.Query<Entity>($"select ID, TYPE, APIRESOURCEID from CN.IS4$APIRESOURCECLAIM where ID = {inputID}").ToList();
 
-                lblDbResult.Content = entities[8].TYPE.ToString();
+                lblDbResult.Content = entities.FirstOrDefault(e => e.ID == inputID).TYPE;
                
                 connection.Close();
             }
