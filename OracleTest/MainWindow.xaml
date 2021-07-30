@@ -1,0 +1,14 @@
+﻿<Window x:Class="OracleTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OracleTest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="457">
+    <Grid>
+        <Button x:Name="btnDbResult" Content="Show" HorizontalAlignment="Left" Margin="266,142,0,0" VerticalAlignment="Top" Height="28" Width="73" Click="btnDbResult_Click"/>
+        <Label x:Name="lblDbResult" Content="*info*" HorizontalAlignment="Left" Margin="110,138,0,0" VerticalAlignment="Top" Height="36" Width="118" FontSize="17"/>
+        <DataGrid x:Name="gridDb" Margin="78,209,118,59"/>
+    </Grid>
+</Window>
